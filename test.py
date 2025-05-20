@@ -37,7 +37,7 @@ def main(args):
     if args.setting in SETTINGS.keys():
         CLASSES = SETTINGS[args.setting]
 
-    checkpoint_path = 'checkpoints/checkpoint.pth' 
+    checkpoint_path = args.checkpoint 
 
 
     backbone = timm.create_model('wide_resnet50_2', features_only=True, pretrained=True).eval() 
@@ -126,8 +126,9 @@ if __name__ == "__main__":
     parser.add_argument('--test_ref_feature_dir', type=str, default="./ref_features/w50/mvtec_1shot")
     parser.add_argument('--device', type=str, default="cuda:1")
     parser.add_argument('--backbone', type=str, default="wide_resnet50_2")
-    parser.add_argument("--num_ref_shot", type=int, default=1)
+    parser.add_argument('--num_ref_shot', type=int, default=1)
     parser.add_argument('--batch_size', type=int, default=8)
+    parser.add_argument('--checkpoint', type=str, default='checkpoints/checkpoint.pth', help='checkpoint path')
     
     args = parser.parse_args()
     init_seeds(42)
