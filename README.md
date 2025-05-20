@@ -29,3 +29,8 @@ dataset/
 ### 1.2 Extract prompt features
 Extract prompts per category from the test folder, run `extract_ref_features.py` to generate inference-stage prompt features, and store them under `./ref_features`.
 ### 1.3 Training ReinAD
+An example of training on the MVTec dataset and testing on the ReinAD dataset is as follows:
+```
+python main.py --setting mvtec_to_reinad --train_dataset_dir /path/to/mvtec --test_dataset_dir /path/to/reinad --test_ref_feature_dir /path/to/ref_features --num_ref_shot 1 --device cuda:0
+```
+Checkpoint is saved as `mvtec_to_reinad_checkpoints.pth` in `./checkpoints` after training.
