@@ -27,5 +27,5 @@ dataset/
 ```
 
 ### 1.2 Extract prompt features
-extract_ref_features
+Extract prompts per category from the test folder, run `extract_ref_features.py` to generate inference-stage prompt features, and store them under `./ref_features`.
 ### 1.3 Training ReinAD
