@@ -235,8 +235,8 @@ if __name__ == "__main__":
     parser.add_argument('--eval_freq', type=int, default=1)
     parser.add_argument('--backbone', type=str, default="wide_resnet50_2")
     parser.add_argument('--num_ref_shot', type=int, default=1)
-    parser.add_argument('--resume', action='store_true', help='若指定则从 checkpoint 继续训练')
-    parser.add_argument('--resume_path', type=str, default='', help='checkpoint 路径')
+    parser.add_argument('--resume', action='store_true', help='resume training from checkpoint if specified')
+    parser.add_argument('--resume_path', type=str, default='', help='path to checkpoint')
 
 
     
