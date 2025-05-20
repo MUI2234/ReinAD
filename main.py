@@ -36,7 +36,6 @@ SETTINGS = {'visa_to_mvtec': VISA_TO_MVTEC, 'mvtec_to_visa': MVTEC_TO_VISA,
             'mvtec_to_reinad': MVTEC_TO_ReinADtest, 'reinadtrain_to_reinadtest':ReinADtrain_TO_ReinADtest}
 
 
-
 def main(args):
 
     if args.setting in SETTINGS.keys():
