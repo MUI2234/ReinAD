@@ -37,5 +37,8 @@ Checkpoint is saved as `mvtec_to_reinad_checkpoints.pth` in `./checkpoints` afte
 ## 2. Inference
 An example of training on the MVTec dataset and testing on the ReinAD dataset is as follows:
 ```
-python test.py --setting mvtec_to_reinad --test_dataset_dir /path/to/reinad --test_ref_feature_dir /path/to/ref_features --num_ref_shot 1  
+python test.py --setting mvtec_to_reinad --test_dataset_dir /path/to/reinad --test_ref_feature_dir /path/to/ref_features --checkpoint /path/to/checkpoint --num_ref_shot 1  
 ```
+## Acknowledgement
+
+Our ReinAD is build on [ResAD](https://github.com/xcyao00/ResAD) and [VAT](https://github.com/Seokju-Cho/Volumetric-Aggregation-Transformer). Thank the authors of ResAD and VAT for open-sourcing their implementation codes!
