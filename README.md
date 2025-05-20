@@ -34,3 +34,8 @@ An example of training on the MVTec dataset and testing on the ReinAD dataset is
 python main.py --setting mvtec_to_reinad --train_dataset_dir /path/to/mvtec --test_dataset_dir /path/to/reinad --test_ref_feature_dir /path/to/ref_features --num_ref_shot 1 --device cuda:0
 ```
 Checkpoint is saved as `mvtec_to_reinad_checkpoints.pth` in `./checkpoints` after training.
+## 2. Inference
+An example of training on the MVTec dataset and testing on the ReinAD dataset is as follows:
+```
+python test.py --setting mvtec_to_reinad --test_dataset_dir /path/to/reinad --test_ref_feature_dir /path/to/ref_features --num_ref_shot 1  
+```
